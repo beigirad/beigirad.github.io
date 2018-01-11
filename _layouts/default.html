@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html class="no-js" lang="en" dir="rtl">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body >
+<body>
 
     <main class="page-content" aria-label="Content">
         {{ content }}
     </main>
+
     {% include icons.html %}
 
-  </body>
+    <script src="assests/foundation/js/vendor/jquery.js"></script>
+    <script src="assests/foundation/js/vendor/what-input.js"></script>
+    <script src="assests/foundation/js/vendor/foundation.js"></script>
+    <script src="assests/foundation/js/app.js"></script>
+</body>
 
 </html>
