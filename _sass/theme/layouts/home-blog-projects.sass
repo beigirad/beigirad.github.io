@@ -1,72 +1,88 @@
 .blog,
 .projects
-    margin-top: 125px
+  margin-top: 125px
 
-    > .list
-        border-top: 1px solid $epsilon
-        margin-top: 30px
-        padding-top: 40px
-        position: relative
+  > .list
+    border-top: 1px solid $epsilon
+    margin-top: 30px
+    padding-top: 40px
+    position: relative
+    list-style-type: none
 
-        &:before
-            display: block
-            content: " "
-            width: 7px
-            height: 7px
-            border: $epsilon 1px solid
-            position: absolute
-            top: -5px
-            left: 50%
-            margin-left: -5px
-            background: #FFF
-            box-shadow: #FFF 0 0 0 5px
-            border-radius: 3px
+    &:before
+      display: block
+      content: " "
+      width: 7px
+      height: 7px
+      border: $epsilon 1px solid
+      position: absolute
+      top: -5px
+      left: 50%
+      margin-left: -5px
+      background: #FFF
+      box-shadow: #FFF 0 0 0 5px
+      border-radius: 3px
 
 .blog > .list,
 .projects > .list
-    > .item
-        display: block
-        width: 95%
-        margin: 0 auto
+  > .item
+    display: block
+    width: 95%
+    margin: 0 auto
 
-    > .item > .url
-        width: 100%
-        display: block
-        padding: 20px 0
-        text-decoration: none
+  > .item > .url
+    width: 100%
+    display: block
+    padding: 20px 0
+    text-decoration: none
 
-    > .item > .url > .title
-        margin: 0
-        width: 75%
-        font-weight: 500
-        transition: all ease-in-out .2s
+  > .item > .url > .title
+    margin: 0
+    width: 75%
+    font-weight: 500
+    transition: all ease-in-out .2s
 
-    > .item:hover > .url > .title
-        color: $delta
+  > .item:hover > .url > .title
+    color: $delta
 
-    // maybe we can't nest html5 elements
-    // can you help me?
-    aside
-        position: relative
-        top: 2px
-        margin: 0
-        width: 25%
-        float: right
-        font-weight: 300
-        color: $gama
-        text-align: right
-        transition: all ease-in-out .2s
+  // maybe we can't nest html5 elements
+  // can you help me?
+  aside
+    position: relative
+    top: 2px
+    margin: 0
+    width: 25%
+    float: right
+    font-weight: 300
+    color: $gama
+    text-align: right
+    transition: all ease-in-out .2s
 
-    .item:hover .url aside
-        color: $alpha
+  .item:hover .url aside
+    color: $alpha
 
 .blog > .list > .item > .url,
 .projects > .list > .item > .url
-    > .title
-        display: inline
+  > .title
+    display: inline
 
-    > .emoji
-        display: inline
-        position: relative
-        top: -4px
-        margin-right: 10px
+  > .emoji
+    display: inline
+    position: relative
+    top: -4px
+    margin-right: 10px
+
+.blog-item
+  text-decoration: none
+
+  > .title
+    width: auto
+    font-weight: 500
+    transition: all ease-in-out .2s
+    text-align: center
+    color: $beta
+    text-decoration: none
+    list-style-type: none
+  > .url
+    font-size: 1rem
+    font-weight: 700

@@ -10,8 +10,7 @@ layout: page
         {% for post in paginator.posts %}
             {% if post.category == 'blog' %}
                 {% if post.hidden != true %}
-
-
+                    {% include blog-item.html %}
                 {% endif %}
             {% endif %}
         {% endfor %}
@@ -21,9 +20,8 @@ layout: page
         {% for post in site.posts %}
             {% if post.post-type == "blog" %}
                 {% if post.hidden != true %}
-                    <li>
-                        <h2 class="title">{{post.title}}}</h2>
-                    </li>
+                    {% include blog-item.html %}
+
                 {% endif %}
             {% endif %}
         {% endfor %}
