@@ -1,7 +1,8 @@
 <nav class="{% if page.shortcode == "home" %} nav-home {% else %} nav {% endif %}">
+
 <ul class="list">
     {% for p in site.pages %}
-    {%if p.display==true and p.shortcode!=page.shortcode%}
+    {%if p.display==true and p.title!=page.title%}
     <li class="item">
         <a class="link"
            href="{%if p.permanentlink %}{{p.permanentlink}}{% else %}{{p.permalink}}{%endif%}">{{p.title}}</a>

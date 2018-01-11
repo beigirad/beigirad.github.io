@@ -14,6 +14,15 @@ dl, dd, ol, ul, figure {
 
 body, html {
   font-size: 62.5%;
+  height: 100%;
+}
+article,
+main{
+  height: 100%;
+}
+
+.full-height{
+  height: 100%;
 }
 
 body {

@@ -1,12 +1,14 @@
-<header class="header-home animated">
-    <a class="link" href="{{ site.url }}/about">
-        <img class="selfie" alt="{{ site.name }}" src="/assets/images/profile.jpg"/>
-    </a>
+<header class="{% if page.shortcode == "home" %} header-home animated {%else%} header{% endif %}">
+<a class="link" href="{{ site.url }}/about">
+    <img class="selfie" alt="{{ site.name }}" src="/assets/images/profile.jpg"/>
+</a>
 
-    <h1 class="title">{{ site.name }}</h1>
-    <h2 class="description">{{ site.bio }}</h2>
+<h1 class="title">{{ site.name }}</h1>
+<h2 class="description">{{ site.bio }}</h2>
 
-    {% include social-links.html %}
-</header>
+{% include social-links.html %}
 
 {% include nav.html %}
+
+</header>
+
