@@ -2,6 +2,7 @@
 layout: page
 title: درباره‌من
 permalink: /about/
+index: 60
 display: true
 
 ---
