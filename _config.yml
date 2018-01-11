@@ -14,19 +14,47 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Your awesome title
-email: your-email@example.com
+name: فرهاد بیگی‌راد
+name-en: Farhad BR
+bio: >-
+  متولد مهر ۷۴ ٬ توسعه دهنده‌ی اندروید
+  دانشجوی کارشناسی نرم‌افزار و علاقمند به تازه‌های دنیای نرم‌افزار
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "far-had.ir" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+
+# if you don't have any of social below, comment the line
+#facebook: myfacebook
+twitter: feri_dom
+email: beigirad@gmail.com
+# google: mygoogle
+# instagram: myinstagram
+# pinterest: mypinterest
+linkedin: beigirad
+# youtube: myyoutube
+# spotify: myspotify
+github: beigirad
+# lastfm: mylastfm
+# stackoverflow: 7044681/mystackoverflow
+# quora: userquora
+#reddit: username
+#medium: medium
+# vimeo: myvimeo
+# lanyrd: mylanyrd
+telegram: beigirad
+
+
+# do you want a larger site? change the option below
+# options: [normal, large] | default: normal
+# normal = 560px / large = 810px
+width: normal
 
 # Build settings
 markdown: kramdown
-# theme: minima
+# theme: theme
 plugins:
   - jekyll-feed
 
