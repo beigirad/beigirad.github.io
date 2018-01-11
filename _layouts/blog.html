@@ -1,0 +1,32 @@
+---
+layout: page
+---
+<section class="list">
+    <ul class="blog">
+
+    {% if site.posts.size == 0 %}
+        <p class="text-center">Nothing published yet!</p>
+    {% elsif site.paginate %}
+        {% for post in paginator.posts %}
+            {% if post.category == 'blog' %}
+                {% if post.hidden != true %}
+
+
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+
+        {% include pagination.html%}
+    {% else %}
+        {% for post in site.posts %}
+            {% if post.post-type == "blog" %}
+                {% if post.hidden != true %}
+                    <li>
+                        <h2 class="title">{{post.title}}}</h2>
+                    </li>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    </ul>
+</section>

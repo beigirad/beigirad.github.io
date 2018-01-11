@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Second post"
+title:  "Welcome to Jekyll!"
 date:   2018-01-09 19:46:06 +0330
 post-type: blog
 comments: true
