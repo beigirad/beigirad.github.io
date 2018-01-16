@@ -74,17 +74,23 @@
 .blog-item
   text-decoration: none
   padding-top: 16px
-
-  > .title
-    width: auto
-    font-weight: 500
-    transition: all ease-in-out .2s
-    text-align: center
-    color: $beta
-    text-decoration: none
-    list-style-type: none
-  > .url
-    font-size: 1rem
-    font-weight: 700
+  > .item-header
+    > .title
+      width: auto
+      font-weight: 700
+      font-size: 1.3em
+      transition: all ease-in-out .2s
+      text-align: right
+      color: $beta
+      text-decoration: none
+      list-style-type: none
+      padding-right: 8px
+    > .date
+      float: left
+      padding-left: 8px
+      font-size: 0.9em
+    > .url
+      font-size: 1rem
+      font-weight: 700
   > .content
     padding-top: 4px

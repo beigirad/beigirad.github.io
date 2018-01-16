@@ -1,8 +1,14 @@
 <div class="item {% if post.star %}star{% endif %} wrapper-normal">
     <li class="blog-item">
-        <a class="title" href="{{ post.url }}">
-            <h2>{{ post.title }}</h2>
-        </a>
+        <div class="item-header">
+            <a class="title" href="{{ post.url }}">
+                {{ post.title }}
+            </a>
+            <div class="date">
+                {{post.date}}
+            </div>
+        </div>
+
         <!--<aside class="date"><time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%b %d %Y" }}</time></aside>-->
         <p class="content">{{post.content | strip_html|strip_newlines | trancate:200}} <a class="url" href="{{post.url}}">  متن کامل...</a></p>
 
