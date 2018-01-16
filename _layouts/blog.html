@@ -8,7 +8,7 @@ layout: page
         <p class="text-center">Nothing published yet!</p>
     {% elsif site.paginate %}
         {% for post in paginator.posts %}
-            {% if post.category == 'blog' %}
+            {% if post.category == "blog" %}
                 {% if post.hidden != true %}
                     {% include blog-item.html %}
                 {% endif %}
@@ -18,10 +18,9 @@ layout: page
         {% include pagination.html%}
     {% else %}
         {% for post in site.posts %}
-            {% if post.post-type == "blog" %}
+            {% if post.category == "blog" %}
                 {% if post.hidden != true %}
                     {% include blog-item.html %}
-
                 {% endif %}
             {% endif %}
         {% endfor %}
