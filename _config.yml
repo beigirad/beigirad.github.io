@@ -24,7 +24,8 @@ description: >-
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://far-had.ir" # the base hostname & protocol for your site, e.g. http://example.com
 
-permalink: /:categories/:year-:month-:day/:title.html
+#permalink: /:categories/:year-:month-:day/:title.html
+permalink: /:categories/:title.html
 
 
 disqus:
@@ -62,6 +63,8 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-jalali
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

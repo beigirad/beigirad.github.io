@@ -27,3 +27,4 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'jekyll-sitemap'
 gem 'jekyll-paginate'
+gem "jekyll-jalali"
