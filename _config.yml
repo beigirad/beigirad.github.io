@@ -26,6 +26,9 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://far-had.ir" # the base hostname & protocol for your site, e.g. http://example.com
 
+disqus:
+   shortname: beigirad
+
 # if you don't have any of social below, comment the line
 #facebook: myfacebook
 twitter: feri_dom
