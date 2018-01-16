@@ -1,27 +1,26 @@
 .blog,
 .projects
-  margin-top: 125px
 
   > .list
     border-top: 1px solid $epsilon
-    margin-top: 30px
     padding-top: 40px
+    padding-bottom: 40px
     position: relative
     list-style-type: none
 
-    &:before
-      display: block
-      content: " "
-      width: 7px
-      height: 7px
-      border: $epsilon 1px solid
-      position: absolute
-      top: -5px
-      left: 50%
-      margin-left: -5px
-      background: #FFF
-      box-shadow: #FFF 0 0 0 5px
-      border-radius: 3px
+    //&:before
+    //  display: block
+    //  content: " "
+    //  width: 7px
+    //  height: 7px
+    //  border: $epsilon 1px solid
+    //  position: absolute
+    //  top: -5px
+    //  left: 50%
+    //  margin-left: -5px
+    //  background: #FFF
+    //  box-shadow: #FFF 0 0 0 5px
+    //  border-radius: 3px
 
 .blog > .list,
 .projects > .list
@@ -74,6 +73,7 @@
 
 .blog-item
   text-decoration: none
+  padding-top: 16px
 
   > .title
     width: auto
@@ -86,3 +86,5 @@
   > .url
     font-size: 1rem
     font-weight: 700
+  > .content
+    padding-top: 4px

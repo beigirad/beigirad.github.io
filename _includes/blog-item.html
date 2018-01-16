@@ -4,7 +4,7 @@
             <h2>{{ post.title }}</h2>
         </a>
         <!--<aside class="date"><time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%b %d %Y" }}</time></aside>-->
-        <p>{{post.content | strip_html|strip_newlines | trancate:200}} <a class="url" href="{{post.url}}">متن کامل...</a></p>
+        <p class="content">{{post.content | strip_html|strip_newlines | trancate:200}} <a class="url" href="{{post.url}}">  متن کامل...</a></p>
 
     </li>
 </div>
