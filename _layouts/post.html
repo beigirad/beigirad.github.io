@@ -8,7 +8,9 @@ layout: page
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         <!--{{ page.date | date: date_format }}-->
-        {{ page.date | jdate: "%A %d %b %Y" | habify}}
+        <!--{{ page.date | jdate: "%A %d %b %Y" | habify}}-->
+        {%if page.jdate%} {{page.jdate}} {%else%} {{page.date | jdate: "%A %d %b %Y" | habify}} {%endif%}
+
 
       </time>
       {% if page.author %}

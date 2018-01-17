@@ -8,7 +8,7 @@
   <meta name=author content="{{ site.name }}">
   {% include favicon.html %}
 
-  <title>{{site.name }}|{{page.title}}</title>
+  <title>{{site.name}}{%if page.shortcode!='home'%}|{{page.title}}{%endif%}</title>
 
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
 

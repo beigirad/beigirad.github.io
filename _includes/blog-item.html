@@ -6,7 +6,7 @@
             </a>
             <div class="date">
                 <!--{{post.date | date:"%Y"}}-->
-                {{ post.date | jdate: "%A %d %b %Y" | habify}}
+                {%if post.jdate%} {{post.jdate}} {%else%}{{post.date | jdate: "%A %d %b %Y" | habify}} {%endif%}
             </div>
         </div>
 
