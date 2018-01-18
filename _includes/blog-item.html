@@ -4,14 +4,30 @@
             <a class="title" href="{{ post.url }}">
                 {{ post.title }}
             </a>
-            <div class="date">
+            <div id="date" class="date">
                 <!--{{post.date | date:"%Y"}}-->
-                {%if post.jdate%} {{post.jdate}} {%else%}{{post.date | jdate: "%A %d %b %Y" | habify}} {%endif%}
+                <!--{%if post.jdate%} {{post.jdate}} {%else%}{{post.date | jdate: "%A %d %b %Y" | habify}} {%endif%}-->
+                <!--{{post.date | date: "%A %d %b %Y" | habify}}-->
             </div>
         </div>
 
         <!--<aside class="date"><time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%b %d %Y" }}</time></aside>-->
         <p class="content">{{post.content | strip_html | strip_newlines | trancate:200}} <a class="url" href="{{post.url}}">  متن کامل...</a></p>
 
+        <script>
+            var d={{post.date | date: "%d"}}
+            var m={{post.date | date: "%m"}}
+            var y={{post.date | date: "%Y"}}
+
+            var date = new Date(2018, 01, 17);
+            var dayWrapper = new jdate();
+            // var dayWrapper = new jdate([1394,01,05]);
+
+
+            // document.getElementById("date").innerText=dayWrapper.format("dddd DD MMMM YYYY");
+            document.getElementById("date").innerText=dayWrapper.date
+
+            // new persianDate([1396,6,17]).format()
+        </script>
     </li>
 </div>
