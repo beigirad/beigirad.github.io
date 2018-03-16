@@ -1,5 +1,5 @@
 <header class="{% if page.shortcode == "home" %} header-home animated {%else%} header{% endif %}">
-<a class="link" href="{{ site.url }}/about">
+<a class="link" href="{% if page.shortcode == "home" %}/about {%else%}/{%endif%}">
     <img class="selfie" alt="{{ site.name }}" src="/assets/images/profile.jpg"/>
 </a>
 

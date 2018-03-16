@@ -6,6 +6,8 @@
 
   <meta name=description content="{{ site.description }}">
   <meta name=author content="{{ site.name }}">
+  <meta name="keywords" content="{% for item in site.keywords %}{{ item }},{% endfor %} ">
+
   {% include favicon.html %}
 
   <title>{{site.name}}{%if page.shortcode!='home'%}|{{page.title}}{%endif%}</title>
