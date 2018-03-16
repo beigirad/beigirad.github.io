@@ -13,16 +13,20 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
 name: فرهاد بیگی‌راد
 name-en: Farhad BR
+keywords:
+  - فرهاد بیگی راد
+  - بیگی راد
+  - beigirad
+  - f.beigirad
 bio: >-
   متولد مهر ۷۴ ، توسعه دهنده‌ی اندروید ،
   دانشجوی کارشناسی نرم‌افزار و علاقمند به تازه‌های دنیای نرم‌افزار
 description: >-
-  خلاصه ای از آموخته ها و تجربه های من از برنامه نویسی
+  خلاصه ای از آموخته ها و تجربه های من از برنامه نویسی فرهاد بیگی‌راد
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://far-had.ir" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://beigirad.ir" # the base hostname & protocol for your site, e.g. http://example.com
 
 #permalink: /:categories/:year-:month-:day/:title.html
 permalink: /:categories/:title.html
@@ -63,7 +67,6 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-jalali
 
 
 # Exclude from processing.
