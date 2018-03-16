@@ -1,10 +1,10 @@
-<div class="item {% if post.star %}star{% endif %} wrapper-normal">
+<div class="item {% if post.star %}star{% endif %} wrapper-minimize">
     <li class="blog-item">
         <div class="item-header">
             <a class="title" href="{{ post.url }}">
                 {{ post.title }}
             </a>
-            <div id="date" class="date"></div>
+            <div id="date:{{post.date}}" class="date"></div>
         </div>
         
         <p class="content">{{post.content | strip_html | strip_newlines | trancate:200}} <a class="url" href="{{post.url}}">  متن کامل...</a></p>
@@ -13,7 +13,7 @@
             var date='{{post.date}}'
             moment.loadPersian(true);
             var mom = moment(date, 'YYYY-M-D HH:mm:ss TZD').format('jD jMMMM jYYYY');
-            document.getElementById("date").innerText=mom
+            document.getElementById("date:{{post.date}}").innerText=mom
         </script>
     </li>
 </div>

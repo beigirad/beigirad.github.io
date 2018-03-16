@@ -198,6 +198,7 @@ pre {
 /**
  * Wrapper
  */
+.wrapper-minimize,
 .wrapper-normal,
 .wrapper-large {
   height: 100%;
@@ -216,6 +217,9 @@ pre {
   }
   .wrapper-large {
     max-width: 810px;
+  }
+  .wrapper-minimize{
+    height: auto;
   }
 }
 

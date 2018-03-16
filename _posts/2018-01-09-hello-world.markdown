@@ -1,8 +1,7 @@
 ---
 layout: post
 title: سلام دنیا
-date:   2018-01-12 1:45:00 +0330
-jdate: جمعه 22 دی 1396
+date: 2018-01-09 1:45:00 +0330
 category: blog
 comments: true
 ---
