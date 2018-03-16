@@ -110,6 +110,8 @@ img, iframe, pre {
 img,
 pre {
   border-radius: 4px;
+  text-align: left;
+  direction: ltr;
 }
 
 figure > img {

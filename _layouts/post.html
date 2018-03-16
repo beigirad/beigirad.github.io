@@ -18,9 +18,9 @@ layout: page
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
   <script>
-      var date='{{page.date}}'
+      var date = '{{page.date}}'
       moment.loadPersian(true);
-      var mom = moment(date, 'YYYY-M-D HH:mm:ss TZD').format('ddd jD jMMMM jYYYY');
-      document.getElementById("date").innerText=mom
+      var jalaliDate = moment(date, 'YYYY-M-D HH:mm:ss TZD').format('ddd jD jMMMM jYYYY');
+      document.getElementById("date").innerText = jalaliDate
   </script>
 </article>
