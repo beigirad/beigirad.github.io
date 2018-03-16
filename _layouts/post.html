@@ -6,13 +6,7 @@ layout: page
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        <!--{{ page.date | date: date_format }}-->
-        <!--{{ page.date | jdate: "%A %d %b %Y" | habify}}-->
-        {%if page.jdate%} {{page.jdate}} {%else%} {{page.date | jdate: "%A %d %b %Y" | habify}} {%endif%}
-
-
-      </time>
+      <time id="date" class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"></time>
       {% if page.author %}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
       {% endif %}</p>
@@ -23,4 +17,10 @@ layout: page
     {% include disqus_comments.html %}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+  <script>
+      var date='{{page.date}}'
+      moment.loadPersian(true);
+      var mom = moment(date, 'YYYY-M-D HH:mm:ss TZD').format('ddd jD jMMMM jYYYY');
+      document.getElementById("date").innerText=mom
+  </script>
 </article>
