@@ -35,7 +35,7 @@ url: "http://beigirad.ir" # the base hostname & protocol for your site, e.g. htt
 permalink: /:categories/:title.html
 paginate: false
 google-gtag: UA-107298433-1
-google-analytics: hello
+# google-analytics: hello
 
 disqus:
    shortname: beigirad
