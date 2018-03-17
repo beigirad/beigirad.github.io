@@ -11,13 +11,12 @@
 
   {% include favicon.html %}
 
-  <title>{{site.name}}{%if page.shortcode!='home'%}|{{page.title}}{%endif%}</title>
+  <title>{%if page.shortcode!='home'%}{{page.title}} - {%endif%}{{site.name}}</title>
 
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
 
-  {% if site.google_analytics %}
-    {% include google-analytics.html %}
-  {% endif %}
+  {% include google-gtag.html %}
+  {% include google-analytics.html %}
 
   <script src="/assets/persiandate/moment.js"></script>
   <script src="/assets/persiandate/moment-jalaali.js"></script>

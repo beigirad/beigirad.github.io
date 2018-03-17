@@ -27,13 +27,15 @@ bio: >-
   متولد مهر ۷۴ ، توسعه دهنده‌ی اندروید ،
   دانشجوی کارشناسی نرم‌افزار و علاقمند به تازه‌های دنیای نرم‌افزار
 description: >-
-  خلاصه ای از آموخته ها و تجربه های من از برنامه نویسی فرهاد بیگی‌راد
+  خلاصه ای از آموخته ها و تجربه های یک دولوپر
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://beigirad.ir" # the base hostname & protocol for your site, e.g. http://example.com
 
 #permalink: /:categories/:year-:month-:day/:title.html
 permalink: /:categories/:title.html
 paginate: false
+google-gtag: UA-107298433-1
+google-analytics: hello
 
 disqus:
    shortname: beigirad
@@ -50,7 +52,7 @@ linkedin: beigirad
 # spotify: myspotify
 github: beigirad
 # lastfm: mylastfm
-# stackoverflow: 7044681/mystackoverflow
+stackoverflow: 2389923/beigirad
 # quora: userquora
 #reddit: username
 #medium: medium
