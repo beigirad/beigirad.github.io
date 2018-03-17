@@ -195,6 +195,10 @@ pre {
   background: #fff;
   border: 1px solid $epsilon;
   border-radius: 2px;
+
+  code {
+    background : none !important;
+  }
 }
 
 /**

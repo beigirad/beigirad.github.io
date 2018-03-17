@@ -1,20 +1,22 @@
 {% if page.comments != false %}
-
-  <div id="disqus_thread"></div>
-  <script>
-    var disqus_config = function () {
-      this.page.url = '{{ page.url | absolute_url }}';
-      this.page.identifier = '{{ page.url | absolute_url }}';
-    };
-
-    (function() {
-      var d = document, s = d.createElement('script');
-
-      s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
-
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
+  <div class="comment" id="disqus_thread"></div>
+  <script async defer src='https://{{ site.disqus.shortname }}.disqus.com/embed.js' onerror="disqusHandler();"></script>
+  <script type="text/javascript">
+    var disqusHandler = (function (w) {
+      function addDisqusErrorIfNotPresent() {
+        var comments = document.getElementById("disqus_thread");
+        if (!document.getElementById('comment__error')) {
+          comments.appendChild(createDisqusError());
+        }
+      }
+      function createDisqusError() {
+        var err = document.createElement('div');
+        err.id = 'comment__error';
+        err.innerHTML = 'اگر این پیام رو میبینید، به این معنیه که دیسکاس، سرویس کامنت بلاگ ما برای شما در دسترس نیست. با آی‌پی غیرایران به این صفحه مراجعه کنید :)'
+        return err;
+      }
+      return addDisqusErrorIfNotPresent;
+    })(window);
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 {% endif %}
