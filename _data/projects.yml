@@ -1,0 +1,122 @@
+- project:
+  title: بازرگانی نازفر
+  description: >-
+    اپلیکیشن بازرگانی نازفر برای سهولت در ارتباط با مشتریان و انجام امور مربوط به ضمانت و پشتیبانی محصولات این شرکت توسعه داده شده
+    همچنین به عنوان کاتالوگ آنلاینی از محصولات ارایه شده در این کمپانی میباشد.
+  feature:
+      - سیستم تیکت و ثبت درخواست گارانتی
+      - پیاده سازی سرویس analytics
+  logo: /assets/images/nazfar.jpg
+  screenshots:
+      - /assets/images/screenshot/nazfar01.jpg
+      - /assets/images/screenshot/nazfar02.jpg
+      - /assets/images/screenshot/nazfar03.jpg
+      - /assets/images/screenshot/nazfar04.jpg
+      - /assets/images/screenshot/nazfar05.jpg
+      - /assets/images/screenshot/nazfar06.jpg
+      - /assets/images/screenshot/nazfar07.jpg
+      - /assets/images/screenshot/nazfar08.jpg
+      - /assets/images/screenshot/nazfar09.jpg
+  link:
+      bazaar: http://cafebazaar.ir/app/ir.beigirad.nazfarapp
+      apk: /assets/apk/nazfar.apk
+
+- project:
+  title: فیکسچه
+  description: >-
+    اپلیکیشن ارایه خدمات و رزرو تعمیر محصولات شرکت آروند تحت برند فیکسچه
+
+  feature:
+      - فرم های کاملا داینامیک
+      - سازگار با افزونه محبوب Gravity Form وردپرس
+      - طراحی متریال
+      - Firebase Notification
+  logo: /assets/images/fixche.jpg
+  screenshots:
+      - /assets/images/screenshot/fixche01.jpg
+      - /assets/images/screenshot/fixche02.jpg
+  link:
+      link: http://www.arvandguarantee.com
+      apk: /assets/apk/fixche.apk
+
+- project:
+  title: پیک ۶۰
+  description: >-
+    درخواست آنلاین پیک از طریق اپلیکیشن
+
+  feature:
+      - طراحی متریال
+      - Firebase Notification
+  logo: /assets/images/peyk60.jpg
+  screenshots:
+      - /assets/images/screenshot/peyk6001.jpg
+      - /assets/images/screenshot/peyk6002.jpg
+      - /assets/images/screenshot/peyk6003.jpg
+      - /assets/images/screenshot/peyk6004.jpg
+      - /assets/images/screenshot/peyk6005.jpg
+      - /assets/images/screenshot/peyk6006.jpg
+      - /assets/images/screenshot/peyk6007.jpg
+      - /assets/images/screenshot/peyk6008.jpg
+      - /assets/images/screenshot/peyk6009.jpg
+  link:
+      link: http://peyk60.com/
+      apk: /assets/apk/peyk60.apk
+
+- project:
+  title: اپلیکیشن بوکچه
+  description: >-
+    اپلیکیشن تخصصی خرید آنلاین کتاب های رمان
+  feature:
+      - نوشته شده با جاوا/کاتلین
+      - طراحی متریال
+      - پیاده سازی و مانیتور رفتار کاربران
+      - پیاده سازی سرویس های fabric
+  logo: /assets/images/bookche.jpg
+  screenshots:
+      - /assets/images/screenshot/bookche01.jpg
+      - /assets/images/screenshot/bookche02.jpg
+      - /assets/images/screenshot/bookche03.jpg
+      - /assets/images/screenshot/bookche04.jpg
+      - /assets/images/screenshot/bookche05.jpg
+      - /assets/images/screenshot/bookche06.jpg
+      - /assets/images/screenshot/bookche07.jpg
+      - /assets/images/screenshot/bookche08.jpg
+      - /assets/images/screenshot/bookche09.jpg
+      - /assets/images/screenshot/bookche10.jpg
+      - /assets/images/screenshot/bookche11.jpg
+      - /assets/images/screenshot/bookche12.jpg
+      - /assets/images/screenshot/bookche13.jpg
+      - /assets/images/screenshot/bookche14.jpg
+      - /assets/images/screenshot/bookche15.jpg
+  link:
+      apk: /assets/apk/bookche.apk
+
+- project:
+  title: اپلیکیشن نیمه گمشده
+  description: >-
+      نیمه گمشده به عنوان یک اپلیکشن در زمینه موفقیت میباشد که درآن شاهد طراحی متریال و چشم نواز خواهید بود.
+      امکان دانلود و پخش پادکست های دسته‌بندی شده
+      امکان مطالعه مطالب اپلیکیشن و نوت برداری از آنها
+      متصل به بازار و پرداخت درون برنامه ای
+  feature:
+      - طراحی متریال
+      - Remote config
+      - محتوای رمزنگاری شده
+      - پرداخت درون برنامه امن
+  logo: /assets/images/nimegomshode.jpg
+  screenshots:
+      - /assets/images/screenshot/nimegomshode01.jpg
+      - /assets/images/screenshot/nimegomshode02.jpg
+      - /assets/images/screenshot/nimegomshode03.jpg
+      - /assets/images/screenshot/nimegomshode04.jpg
+      - /assets/images/screenshot/nimegomshode05.jpg
+      - /assets/images/screenshot/nimegomshode06.jpg
+      - /assets/images/screenshot/nimegomshode07.jpg
+      - /assets/images/screenshot/nimegomshode08.jpg
+      - /assets/images/screenshot/nimegomshode09.jpg
+      - /assets/images/screenshot/nimegomshode10.jpg
+      - /assets/images/screenshot/nimegomshode11.jpg
+      - /assets/images/screenshot/nimegomshode12.jpg
+  link:
+      bazaar: http://cafebazaar.ir/app/ir.beigirad.nimegomshode/
+      apk: /assets/apk/nimegomshode.apk

@@ -1,0 +1,33 @@
+- skill:
+  name: Material Design
+  level: 80%
+- skill:
+  name: Java Programming Language
+  level: 70%
+- skill:
+  name: Kotlin Programming language
+  level: 80%
+- skill:
+  name: Android NDK
+  level: 50%
+- skill:
+  name: REST APIs
+  level: 99%
+- skill:
+  name: Design Patterns
+  level: 80%
+- skill:
+  name: Google Firebase Platform
+  level: 90%
+- skill:
+  name: Git VCS
+  level: 70%
+- skill:
+  name: Di concept and Dagger2
+  level: 40%
+- skill:
+  name: Networking with Retrofit
+  level: 99%
+- skill:
+  name: Reactive Programming
+  level: 30%

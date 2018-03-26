@@ -61,6 +61,13 @@ github: beigirad
 telegram: beigirad
 
 
+# Custom collection
+# collections:
+#   portfolios:
+#     output: true
+#     permalink: /:collection/:name
+
+
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
 # normal = 560px / large = 810px

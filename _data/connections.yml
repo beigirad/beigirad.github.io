@@ -1,0 +1,9 @@
+- connection:
+    name: محل سکونت
+    content: ایران، تهران
+- connection:
+    name: وبسایت
+    content: http://beigirad.ir
+- mail:
+    name: ایمیل
+    content: beigirad@gmail.com
