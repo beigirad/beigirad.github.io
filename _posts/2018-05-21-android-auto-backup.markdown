@@ -18,11 +18,11 @@ application
 (API 23)
 قابلیتی به نام
 Allow Backup
-را ارایه کرد که راهکاری برای بک‌آپ گرفتن از و ریستور کردن دیتاهای
+رو ارایه کرد که راهکاری برای بک‌آپ گرفتن از و ریستور کردن دیتاهای
 private
 اپلیکیشن هاست.
 Auto Backup
-با آپلودکردن این دیتاها روی اکانت گوگل کاربر با محدودیت ۲۵ مگابایتی این نسخه پشتیبان را تهیه میکنه.
+با آپلودکردن این دیتاها روی اکانت گوگل کاربر با محدودیت ۲۵ مگابایتی این نسخه پشتیبان رو تهیه میکنه.
  
 ## از کدوم فایلها بک‌آپ تهیه میشه؟
 - فایل های SharedPrefrences
@@ -39,7 +39,7 @@ Auto Backup
 در دسترسند.
 
 
-**Auto Backup دایرکتوری های `getCacheDir()` و `getCodeCacheDir()` و `getNoBackupFilesDir()` را نادیده میگیرد. چرا که تمامی فایلهای این دایرکتوری ها temperary هستند.**
+**Auto Backup دایرکتوری های `getCacheDir()` و `getCodeCacheDir()` و `getNoBackupFilesDir()` رو نادیده میگیره. چرا که تمامی فایلهای این دایرکتوری ها temperary هستند.**
 
 ## این بک‌آپ ها کجا ذخیره میشن؟
 این فایلها روی اکانت
@@ -128,7 +128,7 @@ key/value
 
 
 ## کمی اطلاعات مفید
-حین انجام فرآیند بک‌آپ گرفتن سیستم عامل برنامه را در حالت 
+حین انجام فرآیند بک‌آپ گرفتن سیستم عامل برنامه رو در حالت 
 restricted mode
 اجرا میکنه تا از دسترسی به فایلهایی که ممکنه 
 conflict 
@@ -151,9 +151,13 @@ Manifest
 instance
 جدا از کلاس 
 Application 
-برنامه را مدیریت میکنه.
+برنامه رو مدیریت میکنه.
+
+[منبع][3]
+
 
 
 
 [1]: https://developer.android.com/guide/topics/data/autobackup#IncludingFiles
 [2]: https://developer.android.com/guide/topics/data/autobackup#ImplementingBackupAgent
+[3]: https://developer.android.com/guide/topics/data/autobackup
