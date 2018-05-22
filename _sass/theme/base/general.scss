@@ -33,8 +33,8 @@ h1, h2, h3, h4 {
   font-family: $fontBase;
   color: $beta;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility
-
+  text-rendering: optimizeLegibility;
+  margin-bottom: 0.6em;
 }
 
 h1 {
@@ -145,14 +145,14 @@ figure.highlight {
  */
 ul, ol {
   margin-left: 0px;
-}
+  margin-right: 2em;
+  margin-bottom  : 0.7em;
 
-li {
-  > ul,
-  > ol {
+  > li {
     line-height: 2.4rem;
     font-weight: 300;
     color: $alpha;
+    line-height: 2em;
   }
 }
 
