@@ -7,7 +7,7 @@ permanentlink: https://atbox.io/beigirad/resume
 display: true
 comments: false
 ---
-<div style="text-align: right">
+<div style="text-align: center">
 
 <br/>
 
@@ -20,5 +20,7 @@ comments: false
 <h2>درحال انتقال</h2>
 <h2>صبر کنید</h2>
 <br/>
+
+<a href="https://atbox.io/beigirad/resume">در صورت منتقل نشدن اینجا کلیک کنید</a>
 
 </div>
