@@ -7,7 +7,7 @@ permanentlink: https://atbox.io/beigirad/resume
 display: true
 comments: false
 ---
-<center>
+<div style="text-align: right">
 
 <br/>
 
@@ -21,4 +21,4 @@ comments: false
 <h2>صبر کنید</h2>
 <br/>
 
-</center>
+</div>
