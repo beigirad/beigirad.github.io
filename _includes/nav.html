@@ -6,7 +6,7 @@
     {%if p.display==true and p.title!=page.title%}
     <li class="item">
         <a class="link"
-           href="{%if p.permanentlink %}{{p.permanentlink}}{% else %}{{p.permalink}}{%endif%}">{{p.title}}</a>
+           href="{{p.permalink}}">{{p.title}}</a>
     </li>
     {%endif%}
     {% endfor %}
