@@ -1,9 +1,9 @@
 ---
 layout: post
 title: رزومه‌من
-permalink: /resume/
+permalink:
 index: 100
-permanentlink: https://atbox.io/beigirad/resume
+permanentlink: https://cv.beigirad.ir
 display: true
 comments: false
 ---
