@@ -3,7 +3,7 @@
     content: ایران، تهران
 - connection:
     name: وبسایت
-    content: http://beigirad.ir
+    content: https://beigirad.ir
 - mail:
     name: ایمیل
     content: beigirad@gmail.com

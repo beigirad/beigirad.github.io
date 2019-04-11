@@ -29,7 +29,7 @@ bio: >-
 description: >-
   خلاصه ای از آموخته ها و تجربه های یک دولوپر
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://beigirad.ir" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://beigirad.ir" # the base hostname & protocol for your site, e.g. http://example.com
 
 #permalink: /:categories/:year-:month-:day/:title.html
 permalink: /:title.html
