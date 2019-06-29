@@ -32,7 +32,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://beigirad.ir" # the base hostname & protocol for your site, e.g. http://example.com
 
 #permalink: /:categories/:year-:month-:day/:title.html
-permalink: /:title.html
+permalink: /:categories/:title
 paginate: false
 google-gtag: UA-107298433-1
 # google-analytics: hello
