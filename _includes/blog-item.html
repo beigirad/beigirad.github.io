@@ -7,7 +7,8 @@
             <div id="date:{{post.date}}" class="date"></div>
         </div>
         
-        <p class="content">{{post.content | strip_html | strip_newlines | truncate: 250}} <a class="url" href="{{post.url}}">  متن کامل...</a></p>
+        <p class="content">{{post.content | split:'<!--break-->' | first }} 
+            <a class="url" href="{{post.url}}">  متن کامل...</a></p>
 
         <script>
             var date='{{post.date}}'
