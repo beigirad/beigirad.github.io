@@ -60,9 +60,8 @@ p {
   line-height: 1.7;
   color: $alpha;
   font-weight: 300;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   letter-spacing: 0.4px;
-  text-align:justify;
 
   @media #{$mobile} {
     letter-spacing: 0.2px;
