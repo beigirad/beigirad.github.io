@@ -86,9 +86,13 @@
       list-style-type: none
       padding-right: 8px
     > .date
+      padding-right: 8px
+      font-size: 1em
       float: left
-      padding-left: 8px
-      font-size: 0.9em
+      
+      @media #{$mobile}
+        float: none
+        
     > .url
       font-size: 1rem
       font-weight: 700

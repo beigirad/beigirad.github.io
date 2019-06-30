@@ -6,6 +6,12 @@
         text-align: right
         margin-bottom: 2rem
 
+        @media #{$mobile}
+            display: block
+
+        @media #{$tablet}
+            display: inline
+
     .date,
     .post-tags
         color: $alpha
@@ -13,10 +19,14 @@
         font-size: 1.6rem
         text-transform: uppercase
         text-align: right
-        display: block
         margin-bottom: 2rem
         -webkit-font-smoothing: antialiased
         text-rendering: optimizeLegibility
+        @media #{$mobile}
+            display: block
+
+        @media #{$tablet}
+            display: inline
 
     > .date
         margin-bottom: 2rem
