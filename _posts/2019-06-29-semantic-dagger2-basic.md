@@ -1,27 +1,46 @@
 ---
 layout: post
-title: Semantic Dagger
+title: Semantic Dagger - Basic
 category: blog
-tags: android di dependency-injection dagger2
+tags: android di dependency-injection dagger2 factory member-injector
 comments: true
 ---
 اگر شما توسعه‌دهنده اندروید باشید حتما اسم
 Dagger
-رو شنیدید. همونطور که میدونیم از محبوبترین فریمورک های
-DI
-هست که تا امروز بیشترین استفاده بین دیگر کتابخونه/فریمورک هارو داره. دلایل این محبوبیت هم مواردی چون حل مشکلات در
+رو شنیدید.
+Dagger2
+از محبوبترین فریمورک های
+Dependency Injection
+هست که توییت مذکور هم همین ادعا رو نشون میده.
+
+{% include image.html 
+    url="/assets/posts/semantic-dagger2/di-vote.jpg"
+    description="https://twitter.com/riggaroo/status/1138099967820816384"
+    width="350px" %}
+
+میتوان گفت که 
+Dagger
+بیشترین استفاده را در بین دیگر کتابخونه/فریمورک ها داره. از دلایل این محبوبیت هم قابلیت
+debuging
+در
 build time
 ،سرعت بالا و نداشتن سربار اضافه در
 runtime
-هست. دلیل این موارد هم جنریت کردن کدهای انجام
+هست. که همه این موارد بخاطر
+generare
+کردن کدهای انجام
 DI 
-در زمان build هست.
+در زمان
+build
+هست.
 
 توی این پست به بررسی کدهای تولید شده بپردازیم.
 <!--break-->
 
 ## تعریف Dependency
-طبق تعریف عام، این عبارت یعنی وقتی کلاس
+طبق تعریف عام،
+dependency injection
+یعنی وقتی کلاس
 A
 به کلاس
 B
@@ -51,19 +70,19 @@ public interface Factory<T> extends Provider<T> {
 ```
 پس به ازای هر
 type
-یا کلاسی که قرار است به عنوان وابستگی دیگر کلاس ها تامین شود، باید این اینترفیس
+یا کلاسی که قرار است به عنوان وابستگی دیگر کلاس ها تامین شود، یکبار باید اینترفیس
 Factory
-را
-implement 
-کند.
+پیاده‌سازی
+(implement)
+شود.
 
-توی کتابخونه
+موقع کار با
 Dagger
 برای تامین وابستگی ها یا به عبارتی برای داشتن یک
 Factory
 برای هر
 type
-یی سه آپشن در اختیار داریم:
+دو گزینه در اختیار داریم:
 
 - `@Inject`
 بالای متد
@@ -74,13 +93,17 @@ Factory
 - `@Provides`
 توی ماژول‌های 
 Dagger
-بر روی متدهایی که میخواهند وابستگی خاصی را تامین کنند استفاده میشود و همانند بالا یک کلاس
+بر روی متدهایی که میخواهند وابستگی خاصی را تامین کنند، می‌آید و همانند بالا یک کلاس
 Factory
 از همان جنس میسازد.
-- `@Binds`
+  - `@Binds`
 این
 annotation
-نیز تنها داخل ماژولها کاربرد دارد، اما کلاس
+نیز تنها داخل ماژولها کاربرد دارد و تقریبا شبیه به
+`@Provides`
+میباشد و در بعضی موارد حتی جایگزین آن میشود. لازم به ذکر است که این
+annotation
+کلاس
 Factory
 جدیدی نمیسازد. و تنها وظیفه اتصال یا
 bind
@@ -98,7 +121,9 @@ CoffeeMaker
 
 ![Project Dependencies](/assets/posts/semantic-dagger2/project-dependencies.png)
 
-تغییرات لازم در این کامیت ایجاد شده‌اند: [d3442b6](https://github.com/beigirad/SemanticDagger/commit/d3442b625c6ceddda6856442c130950ddd9562b3)
+تغییرات لازم مربوط به مدلهای سناریو در
+[این کامیت][cmt-add-scenario-models]
+ایجاد شده‌اند. 
 
 ```java
 public class CoffeeMaker {
@@ -182,7 +207,9 @@ ElectricHeater
 `@Inject`
 در بالای
 constructor
-خود هستند. پس فقط نیاز است که
+خود هستند و
+Factory
+مورد نیاز خود را خواهند ساخت. پس فقط نیاز است که
 ElectricHeater
 را به
 Heater
@@ -191,7 +218,7 @@ CoffeeMaker
 را بسازیم. که برای این موارد باید از ماژول ها استفاده کنیم:
 
 ```java
-@Module(includes = {AppModule.HeaterModule.class})
+@Module
 public abstract class AppModule {
 
     @Provides
@@ -199,16 +226,29 @@ public abstract class AppModule {
         return new CoffeeMaker(heater, pump);
     }
 
-    @Module
-    interface HeaterModule {
-        @Binds
-        Heater bindsHeater(ElectricHeater electricHeater);
-    }
+
+//    @Provides
+//    public static Heater provideHeater(ElectricHeater electricHeater) {
+//        return electricHeater;
+//    }
+    @Binds
+    abstract Heater bindsHeater(ElectricHeater electricHeater);
 }
 ```
 
+در کد بالا تفاوتی بین خروجی و نحوه کار متد
+`provideHeater(...)`
+و
+`bindsHeater(...)`
+وجود ندارد. چرا که هرکدام
+electricHeater
+را از
+Factory
+مربوطه گرفته و به عنوان یک نمونه از 
+Heater
+تامین میکنند.
 
-توجه داشته باشید تنها برای اینکه انواع
+توجه داشته باشید تنها با هدف اینکه انواع مختلف
 Factory
 هارا داشته باشیم هرکدام از کلاس هارا به نوعی خاص
 annotation
@@ -232,7 +272,7 @@ MainActivity
 ست که میخواهیم
 CoffeeMaker
 را در آن تزریق کنیم:
-[کامیت](https://github.com/beigirad/SemanticDagger/commit/9d5a6be5e66a32c6685d01c4423fa3d1e83b7dec)
+[کامیت][cmt-basic-injection]
 
 ```java
 public class MainActivity extends AppCompatActivity {
@@ -260,8 +300,8 @@ public class MainActivity extends AppCompatActivity {
 
 ## Generated Codes
 
-بعد از بیلد شدن پروژه خواهیم فایل هایی در آدرس زیر ساخته خواهند شد:
-[کامیت](https://github.com/beigirad/SemanticDagger/commit/75edefcd2ceb49045318c3661e218c641184b50b)
+بعد از بیلد شدن پروژه فایل هایی در آدرس زیر ساخته خواهند شد:
+[کامیت][cmt-generated-code]
 
 ```
 // java annotationProcessor
@@ -326,9 +366,9 @@ public final class Pump_Factory implements Factory<Pump> {
 `@Provides`
 داخل ماژول نیز به همین روال
 Factory
-هایی ساخته شده که نام ماژول را به عنوان ماژول را به عنوان پیشوند نام خود دارند. پسوند 
-_Factory
-نیز همچنان وجود دارد.
+هایی ساخته شده که نام ماژول را به عنوان ماژول را به عنوان پیشوند، نام متد به عنوان نام اصلی و پسوند 
+Factory
+نیز دارند.
 
 ```java
 public final class AppModule_ProvideCoffeeMakerFactory implements Factory<CoffeeMaker> {
@@ -376,14 +416,15 @@ public interface MembersInjector<T> {
 }
 ```
 
-این کلاسهای
+کلاسهایی که
 MemberInjector
-که با توجه به متغیر/متدهای علامتگذاری شده با
+را
+implement
+کرده‌اند، این کار را با توجه به متغیر/متدهای علامتگذاری شده با
 @Inject
-در کلاسهای وابسته
-ساخته میشوند، نیازمندی‌های خود را دریافت کرده و به متغیرهای  کلاس وابسته
+در کلاس وابسته
 (MainActivity)
-نسبت میدهند.
+ساخته میشوند. نیازمندی‌های خود را دریافت کرده و به متغیرهای  کلاس وابسته نسبت میدهند.
 
 ```java
 public final class MainActivity_MembersInjector implements MembersInjector<MainActivity> {
@@ -413,7 +454,7 @@ MemberInjector
 را از طریق
 Factory
 ها فراهم کرده و متدهای
-inject
+injectXXX
 را صدا کند.
 
 ```java
@@ -462,12 +503,14 @@ implement
 dagger
 برای رعایت اصل 
 Single Responsibility
-متدهای اضافه بسیاری میسازد. و مثلا بدلیل اینکه
+متدهای اضافه بسیاری میسازد، مثلا بدلیل اینکه
 CoffeeMaker
 دارای آرگومانهای دیگری ست که هرکدام از مسیر دیگری بدست آمده‌اند، آنهارا داخل متد 
 `injectMainActivity()`
 نساخته و از طریق یک متد 
 getter
+ای به نام
+getCoffeeMaker()
 آنهارا فراهم آورده.
 
 ## جمع بندی
@@ -480,14 +523,6 @@ constructor
 روی متدهای ماژول یک 
 Factory
 مجزا خواهند ساخت.
-- هر کلاسی که اصطلاحا
-field/method Injection
-انجام داده باشد دارای یک
-MemberInjector
-خواهد بود.
-- کامپوننت ها عامل اصلی 
-injection
-هستند.
 - ماژول‌هایی که ها
 abstract class
 یا
@@ -498,9 +533,17 @@ generate
 Factory
 ها و درک 
 type
-های
+های قابل
 bind
-شده.
+شدن.
+- هر کلاسی که اصطلاحا
+field/method Injection
+انجام داده باشد دارای یک
+MemberInjector
+خواهد بود.
+- کامپوننت ها عامل اصلی 
+injection
+هستند.
 - تنها در مواردی که کلاسی فاقد
 `Scope`
 باشد، بجای ساخت نمونه‌ای از
@@ -511,7 +554,12 @@ Factory
 instantiate
 شده است. (در این موارد
 Factory 
-عملا اضافه هستند :)  )
+عملا اضافه هست :)  )
 
 
 خیلی خیلی ادامه دارد...
+
+
+[cmt-add-scenario-models]: https://github.com/beigirad/SemanticDagger/commit/d3442b625c6ceddda6856442c130950ddd9562b3
+[cmt-basic-injection]: https://github.com/beigirad/SemanticDagger/commit/1f06dc49fffd8b0bb684cb81468bc364094a863a
+[cmt-generated-code]: https://github.com/beigirad/SemanticDagger/commit/37dfe2022bf7f3c8faab41289770b8741f111ea3
