@@ -115,14 +115,15 @@ pre {
 
 figure > img {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 figcaption {
   position: relative;
-  top: -20px;
   left: 0;
   right: 0;
-  margin: 0 auto;
+  margin: 0 auto 10px;
   width: 100%;
   text-align: center;
   font-size: 1.3rem;
