@@ -1,26 +1,43 @@
 ---
 layout: post
-title: Semantic Dagger - Basic
+title: Semantic Dagger - Introduction (Factory)
 category: blog
 tags: android di dependency-injection dagger2 factory member-injector
 comments: true
 ---
-اگر شما توسعه‌دهنده اندروید باشید حتما اسم
-Dagger
-رو شنیدید.
-Dagger2
-از محبوبترین فریمورک های
+توی سری مطالب 
+Semantic Dagger 
+میخوایم در مورد 
+Dagger2 
+که محبوب‌ترین و پر استفاده‌ترین فریمورک 
 Dependency Injection
-هست که توییت مذکور هم همین ادعا رو نشون میده.
+در اندروید هست صحبت کنیم.
 
 {% include image.html 
     url="/assets/posts/semantic-dagger2/di-vote.jpg"
     description="https://twitter.com/riggaroo/status/1138099967820816384"
     width="350px" %}
 
-میتوان گفت که 
-Dagger
-بیشترین استفاده را در بین دیگر کتابخونه/فریمورک ها داره. از دلایل این محبوبیت هم قابلیت
+رویکرد کلی این مطالب آموزش چگونگی استفاده و پیاده‌سازی 
+Dagger 
+نیست. بلکه بررسی چگونگی عملکرد این کتابخونه و کدهای 
+geneate 
+شده هست تا با یادگیری معنایی و ساختاری
+Dagger 
+با تسلط بیشتر و به صورت بهینه‌تری از این کتابخونه استفاده کنیم.
+<!--break-->
+
+لازمه بگم که درک دیزاین پترن‌های 
+[Builder](https://en.wikipedia.org/wiki/Builder_pattern)
+و 
+[Factory](https://en.wikipedia.org/wiki/Factory_method_pattern)
+به درک عمیقتر این پست ها کمک میکنه. و همچنین آشنایی با 
+Dagger 
+هم از پیش‌نیازهای این مطالب هست.
+
+همونطور که میدونید از دلایل محبوبیت 
+Dagger 
+قابلیت
 debuging
 در
 build time
@@ -32,10 +49,7 @@ generare
 DI 
 در زمان
 build
-هست.
-
-توی این پست به بررسی کدهای تولید شده بپردازیم.
-<!--break-->
+هست که میخوایم بخشی از این کد هارو بررسی کنیم.
 
 ## تعریف Dependency
 طبق تعریف عام،
@@ -505,13 +519,13 @@ dagger
 Single Responsibility
 متدهای اضافه بسیاری میسازد، مثلا بدلیل اینکه
 CoffeeMaker
-دارای آرگومانهای دیگری ست که هرکدام از مسیر دیگری بدست آمده‌اند، آنهارا داخل متد 
+دارای آرگومانهای دیگری ست که هرکدام از مسیر متفاوتی بدست آمده‌اند، آنهارا داخل متد 
 `injectMainActivity()`
-نساخته و از طریق یک متد 
+نساخته، بلکه از طریق یک متد 
 getter
 ای به نام
-getCoffeeMaker()
-آنهارا فراهم آورده.
+`getCoffeeMaker()`
+آنهارا فراهم آورده. [لینک](https://github.com/beigirad/SemanticDagger/blob/37dfe2022bf7f3c8faab41289770b8741f111ea3/app/build/generated/source/apt/debug/ir/beigirad/semanticdagger/di/DaggerAppComponent.java#L21)
 
 ## جمع بندی
 - هر
@@ -554,8 +568,12 @@ Factory
 instantiate
 شده است. (در این موارد
 Factory 
-عملا اضافه هست :)  )
+عملا اضافه هست :)  ) [مثال](https://github.com/beigirad/SemanticDagger/blob/37dfe2022bf7f3c8faab41289770b8741f111ea3/app/build/generated/source/apt/debug/ir/beigirad/semanticdagger/di/DaggerAppComponent.java#L22)
 
+---
+تمامی فایل های این پست روی برنچ
+[p1-factory](https://github.com/beigirad/SemanticDagger/tree/p1-factory)
+در دسترس است.
 
 خیلی خیلی ادامه دارد...
 
