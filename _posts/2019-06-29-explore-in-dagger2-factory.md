@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Semantic Dagger - Introduction (Factory)
+title: Explore in Dagger - Introduction (Factory)
 category: blog
 tags: android di dependency-injection dagger2 factory member-injector
 comments: true
 ---
 توی سری مطالب 
-Semantic Dagger 
+Explore in Dagger 
 میخوایم در مورد 
 Dagger2 
 که محبوب‌ترین و پر استفاده‌ترین فریمورک 
@@ -14,15 +14,15 @@ Dependency Injection
 در اندروید هست صحبت کنیم.
 
 {% include image.html 
-    url="/assets/posts/semantic-dagger2/di-vote.jpg"
+    url="/assets/posts/dagger2-series/di-vote.jpg"
     description="https://twitter.com/riggaroo/status/1138099967820816384"
     width="350px" %}
 
 رویکرد کلی این مطالب آموزش چگونگی استفاده و پیاده‌سازی 
 Dagger 
-نیست. بلکه بررسی چگونگی عملکرد این کتابخونه و کدهای 
+نیست. بلکه بررسی چگونگی عملکرد این کتابخونه و ساختار کدهای 
 geneate 
-شده هست تا با یادگیری معنایی و ساختاری
+شده هست تا با یادگیری ساختاری
 Dagger 
 با تسلط بیشتر و به صورت بهینه‌تری از این کتابخونه استفاده کنیم.
 <!--break-->
@@ -60,7 +60,7 @@ A
 B
 وابستگی داشته باشد، بتوانیم با تکنیکی خاص این وابستگی را تامین کنیم.
 
-![DI Concept](/assets/posts/semantic-dagger2/di-concept.png)
+![DI Concept](/assets/posts/dagger2-series/di-concept.png)
 
 تا به اینجا، موضوع مورد توجه ما، ایجاد نمونه‌ای از کلاس
 B
@@ -133,7 +133,7 @@ interface
 CoffeeMaker
 داشته باشیم که به شکل زیر تعریف شده است:
 
-![Project Dependencies](/assets/posts/semantic-dagger2/project-dependencies.png)
+![Project Dependencies](/assets/posts/dagger2-series/project-dependencies.png)
 
 تغییرات لازم مربوط به مدلهای سناریو در
 [این کامیت][cmt-add-scenario-models]
@@ -319,9 +319,9 @@ public class MainActivity extends AppCompatActivity {
 
 ```
 // java annotationProcessor
-SemanticDagger/app/build/generated/source/apt
+<root>/app/build/generated/source/apt
 // kotlin annotationProcessor
-SemanticDagger/app/build/generated/source/kapt
+<root>/app/build/generated/source/kapt
 ```
 
 همانطور که میبنیم هرکدام از کلاس هایی که
