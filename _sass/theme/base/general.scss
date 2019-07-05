@@ -160,10 +160,13 @@ ul, ol {
  * Blockquotes
  */
 blockquote {
-  border-left: 3px solid #eee;
-  padding-left: 15px;
+  border-right: 6px solid rgb(192, 192, 192);
+  padding-right: 16px;
+  margin-right: 16px;
+  margin-bottom: 8px;
   letter-spacing: -1px;
   font-style: italic;
+  font-weight: bold;
 
   > :last-child {
     margin-bottom: 0;
@@ -232,6 +235,17 @@ pre {
 .full-height{
   height: 100%;
   width: 100%;
+}
+
+.refered{
+  background-color: #eee;
+  padding: 1em;
+  width: 80%;
+  margin-bottom: 8px;
+  a {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /**
