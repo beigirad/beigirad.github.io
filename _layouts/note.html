@@ -1,0 +1,30 @@
+---
+layout: page
+---
+<section class="blog">
+    <ul class="list" style="margin-right: 0px;">
+
+    {% if site.posts.size == 0 %}
+        <p class="text-center">Nothing published yet!</p>
+    {% elsif site.paginate %}
+        {% for post in paginator.posts %}
+            {% if post.category == "note" %}
+                {% if post.hidden != true %}
+                    {% include blog-item.html %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+
+        {% include pagination.html%}
+    {% else %}
+        {% assign sorted = (site.posts | sort: 'date') | reverse %}
+        {% for post in sorted %}
+            {% if post.category == "note" %}
+                {% if post.hidden != true %}
+                    {% include blog-item.html %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    </ul>
+</section>
