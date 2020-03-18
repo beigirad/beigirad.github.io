@@ -256,3 +256,22 @@ pre {
   display: table;
   clear: both;
 }
+table, th, td {
+  margin-bottom: 10px;
+  direction: ltr;
+}
+table, th, td {
+  border: 1px solid black;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+.hint {
+  border-radius: 10px;
+  background: wheat;
+  padding: 16px;
+  margin-top: 46px;
+  text-align: center;
+}
