@@ -1,8 +1,8 @@
 ---
 layout: post
 title: NetworkPlus - IP v4
-category: note
-date: 2020-03-18T12:00:00
+category: notes
+date: 2020-03-18T09:00:00
 tags: comptia network-plus
 comments: false
 ---

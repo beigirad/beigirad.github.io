@@ -1,7 +1,7 @@
 ---
-layout: note
+layout: notes
 title: یادداشت ها
 index: 5
-permalink: /note/
+permalink: /notes/
 display: true
 ---

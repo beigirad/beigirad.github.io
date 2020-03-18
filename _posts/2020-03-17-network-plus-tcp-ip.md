@@ -1,7 +1,7 @@
 ---
 layout: post
 title: NetworkPlus - TCP/IP
-category: note
+category: notes
 date: 2020-03-17T23:00:00
 tags: comptia network-plus
 comments: false

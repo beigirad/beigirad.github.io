@@ -13,7 +13,7 @@ layout: page
         <p class="text-center">Nothing published yet!</p>
     {% elsif site.paginate %}
         {% for post in paginator.posts %}
-            {% if post.category == "note" %}
+            {% if post.category == "notes" %}
                 {% if post.hidden != true %}
                     {% include blog-item.html %}
                 {% endif %}
@@ -24,7 +24,7 @@ layout: page
     {% else %}
         {% assign sorted = (site.posts | sort: 'date') | reverse %}
         {% for post in sorted %}
-            {% if post.category == "note" %}
+            {% if post.category == "notes" %}
                 {% if post.hidden != true %}
                     {% include blog-item.html %}
                 {% endif %}
